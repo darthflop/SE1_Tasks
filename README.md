@@ -1,59 +1,30 @@
-## GitHub-Seite der Veranstaltung SE-1 (Code-Repository)
+## Aufgabe 1
 
-Auf dieser GitHub-Seite finden sie die Source-Codes aus den Übungen sowie Demo-Codes aus den Vorlesungen. Sie finden hier zudem einige nützliche Links für die Übungen.
-Die Seite ist noch im Aufbau und wird kontinuierlich überarbeitet.
+#### Wie kann diese Kommunikationsverbindung nun dennoch mit Hilfe einer zusätzlichen „Fabrik“-Klasse, welche die dazu notwendige Objekt-Erzeugung übernimmt, aufgebaut werden? In welchem Package sollte diese zusätzliche Klasse liegen?
 
-(Hinweis: diese Seite ist im Aufbau)
+Die "Fabrik"-Klasse enthält eine statische Methode zur erzeugung eines GermanTranslator Objekts.
+In der Methode wird ein GermanTranslator Objekt erzeugt und das aktuelle Datum eingelesen, richtig Formatiert und mit der Methode setDate gesetzt.
+Die Methode gibt das erzeugte Objekt zurück.
 
-### Hilfreiche Video-Tutorien:
+#### Welches Entwurfsmuster (engl.: design pattern) könnte für die Problematik der Objekt-Erzeugung verwendet werden? Was ist der software-technische Nutzen bei der Verwendung des Entwurfsmusters?
 
-Hinweis: Diese Videos basieren auf einer etwas älteren Version von IntelliJ. Die Darstellung einzelner Fenster kann sich ggf. geändert haben. Die Funktionen sollten aber prinzipiell vorhanden sein.
+Hier sollte das Entwurfsmuster "Factory Method" benutzt werden.
+Ein Vorteil ist die Entkopplung der Erzeugung von Objekten, wodurch der Code flexibler bleibt, da Anpassungen
+nur an einer Stelle erfolgen müssen. Eine Einheitlichere Gestaltung der Objekterzeugung wird dadurch auch erleichtert.
 
-[Teil 1: Installation IntelliJ und Entwicklung eines Java-Projekts mit JUnit5](https://www.youtube.com/watch?v=TNtRpkdW64s )
+#### Wie muss man den Source Code des Interface ggf. anpassen, um mögliche auftretende Kompilierfehler zu beseitigen?
+Die Anpassung der Versionsnummer ist aktuell nicht möglich, das führt zwar nicht zu Kompilierfehlern, ist aber nicht so schön für die Versionskontrolle.
 
-[Teil 2: Clone eines GitHub-Repository mit IntelliJ](https://www.youtube.com/watch?v=5nr4c3pwu3g)
+____
+## Aufgabe 2
 
-[Teil 3: Push von Source Code auf ein GitHub-Repository mit IntelliJ](https://www.youtube.com/watch?v=PbGiYUR9q0A)
+#### Was ist der Vorteil einer separaten Test-Klasse?
+Durch die Separierung bleibt der Code übersichtlicher. Außerdem können mehrere Personen gleichzeitig an Tests schreiben, ohne den original Code zu verändern, wodurch die Integrität erhalten bleibt. Zuletzt werden die Test-Cases am Ende nicht dem Kunden mit übergeben.
 
-[Teil 4: Pull von Änderungen bzw. von neuen Codes aus einem GitHub-Repository ](https://www.youtube.com/watch?v=I4L0k33TNQ4)
+#### Was ist bei einem Blackbox-Test der Sinn von Äquivalenzklassen?
+Die Blackbox-Tests sollten möglichst alle Testcases betrachten, was bei größeren Programmen sehr viel Aufwand werden kann. Geht es zum Beispiel um Zahlenwerte, kann der Aufwand eingegrenzt werden. Sollen beispielsweise negative Zahlen nicht erlaubt sein, reicht es einige wenige negative Zahlen zu testen.
 
-### Literatur zu Software Engineering
-Eine Sammlung von Quellen und Ressourcen finden Sie auf den Literatur-Repro: <br>
-https://github.com/aldaGit/se-repository
+#### Warum ist ein Blackbox-Test mit JUnit auf der Klasse Client nicht unmittelbar durchführbar?
 
-Auf diesem Repository finden Sie viele nützliche Links, Publikationen und Hinweise rund um meine Vorlesungsreihe Software Engineering. Diese Quellen-Sammlung wird kontinuierlich und semesterübergreifend von mir gepflegt. Die aktuellen Folien zu der Vorlesung im aktuellen Semester finden Sie auf dem LEA-Kurs der jeweiligen Veranstaltung.
-
-
-### Links zu hilfreichen Tools:
-
-[Draw.io](https://app.diagrams.net/) <br>
-Schlankes browser-basiertes Tool, keine Installation auf ihrem Rechner notwendig! Abspeicherung der Dokumente in verschiedenen Formen möglich (Lokal, Cloud). Läuft nativ ohne Plugin auf allen gängigen Browsern.
-
-[UMLet](http://www.umlet.com/) <br>
-Gutes und übersichtliches Tool zur Modellierung, installierbar für Windows / MAC / Linux.
-Unterstützt keine Sequenzdiagramme (Anpassung möglich). Bedienung etwas gewöhnungsbedürftig zu Beginn, dann aber sehr effektiv ;-)
-
-[Mermaid](https://mermaid.js.org/syntax/classDiagram.html) <br>
-Mermaid ist ein DSL-basierter Editor, der eine Vielzahl von Modellen und Diagrammtypen unterstützt. Anstelle eines grafischen Editors entwickelt man in Mermaid die Modelle mit Hilfe einer Sprache (einer sogenannten Domain Specific Language ([DSL](https://martinfowler.com/dsl.html))). Vorteil ist auch eine direkte [Integration](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) der Modelle in eine readme.md.
-
-
-
-### IntelliJ als IDE
-In den Vorlesungen SE-1 (BWI, BCSP) und SE-2 (BWI) wird die Verwendung der Entwicklungsumgebung IntelliJ empfohlen, die IDE hat sich in den letzten Jahren als Standard etabliert. Hier empfiehlt sich der Download der Ultimate-Version, die als registrierter Student kostenlos bezogen werden kann! Unübertroffen ist die Auto Completion Funktion, welche IntelliJ recht populär und beliebt gemacht hat. In den Übungen wird die IntelliJ für Demo-Zwecke verwendet. Auch die Verwendung eines GitHub-Repository ist hier sehr intuitiv realisiert worden.
-<br>
-[Download von IntelliJ](https://www.jetbrains.com/idea/)
-
-### Links zu Markdown
-
-Sie möchten eine eigene readme.md (also eine wie diese Seite) implementieren? Hier ein hilfreicher Link eines einfachen Guides::
-<br>
-[Markdown Guide](https://www.markdownguide.org/basic-syntax/)
-
-Das Tutorium von GitHub ist recht umfangreich, aber auch hilfreich für komplexere Seiten: <br>
-[Guide von GitHub](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
-
-
-
-
-
+Die Methode display ist void und hat somit keinen Rückgabewert. Das Ergebnis der Methode wird auf dem Bildschirm ausgegeben. 
+Dadurch kann die Test-Klasse die Ausgabe nicht überprüfen.
