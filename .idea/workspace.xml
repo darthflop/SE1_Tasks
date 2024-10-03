@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="Anpassung README">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/view/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/view/Client.java" afterDir="false" />
+    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="Implementierung &quot;void display&quot; in Client">
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/control/GermanTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/control/GermanTranslatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Client.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.GermanTranslatorTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -96,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727961466714</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implementierung &quot;void display&quot; in Client">
+      <option name="closed" value="true" />
+      <created>1727967488766</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727967488766</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +114,7 @@
     <MESSAGE value="Factory Klasse und Übersetzer Methode" />
     <MESSAGE value="Aufgaben in README beantwortet" />
     <MESSAGE value="Anpassung README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Anpassung README" />
+    <MESSAGE value="Implementierung &quot;void display&quot; in Client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementierung &quot;void display&quot; in Client" />
   </component>
 </project>
