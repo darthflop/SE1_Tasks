@@ -1,5 +1,8 @@
 package org.hbrs.se1.ws24.exercises.uebung1.view;
 
+import org.hbrs.se1.ws24.exercises.uebung1.control.Factory;
+import org.hbrs.se1.ws24.exercises.uebung1.control.GermanTranslator;
+
 public class Client {
 
 		/**
@@ -14,10 +17,11 @@ public class Client {
 			//
 			// Strenge Implementierung (nur) gegen das Interface Translator gewuenscht!
 
-			 System.out.println("Das Ergebnis der Berechnung: " +
-					"[das Ergebnis an dieser Stelle]" );
+
+			 System.out.println("Das Ergebnis der Berechnung: " + Factory.createGermanTranslator().translateNumber(aNumber));
 
 		 }
+
 }
 
 
