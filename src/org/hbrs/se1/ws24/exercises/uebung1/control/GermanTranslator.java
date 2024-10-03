@@ -12,7 +12,7 @@ public class GermanTranslator implements Translator {
 		String[] translate = {"eins","zwei","drei","vier","fuenf","sechs","sieben","acht","neun","zehn"};
 
 		if(number > 10 || number < 1)
-			return "Übersetzung der Zahl " + number + " nicht möglich";
+			return "Übersetzung der Zahl " + number + " nicht möglich (" + Translator.version + ")";
 		else
 			return translate[number - 1];
 	}

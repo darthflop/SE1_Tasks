@@ -10,12 +10,12 @@ public class GermanTranslatorTest {
         GermanTranslator translator = new GermanTranslator();
 
         // test der Zahl 0
-        assertEquals("Übersetzung der Zahl 0 nicht möglich" , translator.translateNumber(0));
+        assertEquals("Übersetzung der Zahl 0 nicht möglich (1.0)" , translator.translateNumber(0));
 
         //test negativer Zahlen
-        assertEquals("Übersetzung der Zahl -1 nicht möglich" , translator.translateNumber(-1));
-        assertEquals("Übersetzung der Zahl -55 nicht möglich" , translator.translateNumber(-55));
-        assertEquals("Übersetzung der Zahl -235 nicht möglich" , translator.translateNumber(-235));
+        assertEquals("Übersetzung der Zahl -1 nicht möglich (1.0)" , translator.translateNumber(-1));
+        assertEquals("Übersetzung der Zahl -55 nicht möglich (1.0)" , translator.translateNumber(-55));
+        assertEquals("Übersetzung der Zahl -235 nicht möglich (1.0)" , translator.translateNumber(-235));
 
         // tests aller Zahlen von 1 bis 10 (da es nur zehn sind)
         assertEquals("eins" , translator.translateNumber(1));
@@ -30,9 +30,9 @@ public class GermanTranslatorTest {
         assertEquals("zehn" , translator.translateNumber(10));
 
         //tests Zahlen >10
-        assertEquals("Übersetzung der Zahl 11 nicht möglich" , translator.translateNumber(11));
-        assertEquals("Übersetzung der Zahl 110 nicht möglich" , translator.translateNumber(110));
-        assertEquals("Übersetzung der Zahl 4567 nicht möglich" , translator.translateNumber(4567));
+        assertEquals("Übersetzung der Zahl 11 nicht möglich (1.0)" , translator.translateNumber(11));
+        assertEquals("Übersetzung der Zahl 110 nicht möglich (1.0)" , translator.translateNumber(110));
+        assertEquals("Übersetzung der Zahl 4567 nicht möglich (1.0)" , translator.translateNumber(4567));
     }
 
 }
