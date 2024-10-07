@@ -16,7 +16,7 @@ nur an einer Stelle erfolgen müssen. Eine Einheitlichere Gestaltung der Objekte
 Die Anpassung der Versionsnummer ist aktuell nicht möglich, das führt zwar nicht zu Kompilierfehlern, ist aber nicht so schön für die Versionskontrolle.
 
 ____
-## Aufgabe 3
+## Aufgabe 2
 
 #### Was ist der Vorteil einer separaten Test-Klasse?
 Durch die Separierung bleibt der Code übersichtlicher. Außerdem können mehrere Personen gleichzeitig an Tests schreiben, ohne den original Code zu verändern, wodurch die Integrität erhalten bleibt. Zuletzt werden die Test-Cases am Ende nicht dem Kunden mit übergeben.
