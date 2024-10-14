@@ -27,11 +27,10 @@ public class Container {
             if(x.getID() == id){
                 this.m.remove(x);
                 this.size--;
-            }else{
-                return -1;
+                return 0;
             }
         }
-        return 0;
+        return -1;
     }
 
     public void dump(){
