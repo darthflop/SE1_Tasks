@@ -42,15 +42,4 @@ public class Container {
     public int size(){
         return this.size;
     }
-
-    public static void main(String[] args) {
-        Container c = new Container();
-        for (int i = 0; i < 100; i++) {
-            c.addMember(new ConcreteMember(i));
-        }
-        c.dump();
-        System.out.println(c.size());
-
-    }
-
 }
