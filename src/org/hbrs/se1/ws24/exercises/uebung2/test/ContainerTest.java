@@ -16,7 +16,7 @@ public class ContainerTest {
     @Test
     public void testSizes(){
 
-        Container test1 = new Container();
+        Container test1 = Container.getContainer();
 
         assertEquals(0, test1.size());
         test1.addMember(one);
@@ -32,7 +32,7 @@ public class ContainerTest {
     @Test
     public void testAddDelete(){
 
-        Container test2 = new Container();
+        Container test2 = Container.getContainer();
 
         test2.addMember(one);
         assertThrows(ContainerException.class, () -> test2.addMember(one));
