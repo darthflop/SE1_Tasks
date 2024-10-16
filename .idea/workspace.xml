@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="Implementierung &quot;void display&quot; in Client">
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/control/GermanTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung1/control/GermanTranslatorTest.java" afterDir="false" />
+    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="Erweiterung GermanTranslator und Test">
+      <change afterPath="$PROJECT_DIR$/UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -104,7 +108,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727967488766</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Erweiterung GermanTranslatorTest">
+      <option name="closed" value="true" />
+      <created>1727967608533</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727967608533</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Erweiterung GermanTranslator und Test">
+      <option name="closed" value="true" />
+      <created>1727967710334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727967710334</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +135,8 @@
     <MESSAGE value="Aufgaben in README beantwortet" />
     <MESSAGE value="Anpassung README" />
     <MESSAGE value="Implementierung &quot;void display&quot; in Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementierung &quot;void display&quot; in Client" />
+    <MESSAGE value="Erweiterung GermanTranslatorTest" />
+    <MESSAGE value="Erweiterung GermanTranslator und Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erweiterung GermanTranslator und Test" />
   </component>
 </project>
