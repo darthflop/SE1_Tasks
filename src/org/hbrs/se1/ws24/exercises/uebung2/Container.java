@@ -13,12 +13,12 @@ public class Container {
     private List<Member> m = new LinkedList<>();
     private int size;
 
-    private Container(){
+    private Container() {
         this.size = 0;
     }
 
-    public static Container getContainer(){
-        if(container == null){
+    public static Container getContainer() {
+        if (container == null) {
             container = new Container();
         }
         return container;
@@ -26,8 +26,8 @@ public class Container {
 
     public void addMember(Member member) throws ContainerException {
 
-        for(Member x:this.m){
-            if(x.getID() == member.getID()){
+        for (Member x : this.m) {
+            if (x.getID() == member.getID()) {
                 throw new ContainerException("Das Member-Objekt mit der ID " + member.getID() + " ist bereits vorhanden!");
             }
         }
@@ -35,9 +35,9 @@ public class Container {
         this.size++;
     }
 
-    public int deleteMember(int id){
-        for(Member x:this.m){
-            if(x.getID() == id){
+    public int deleteMember(int id) {
+        for (Member x : this.m) {
+            if (x.getID() == id) {
                 this.m.remove(x);
                 this.size--;
                 return 0;
@@ -46,42 +46,60 @@ public class Container {
         return -1;
     }
 
-    public void dump(){
-        for(Member x:m){
+    public void dump() {
+        for (Member x : m) {
             System.out.println(x);
         }
     }
 
-    public int size(){
+    public int size() {
         return this.size;
     }
 
     public void store() throws PersistenceException, IOException {
         PersistenceStrategyStream<Member> store = new PersistenceStrategyStream<>();
-        store.setLocation("/home/flop/Dokumente/");
+        // Linux
+        //store.setLocation("/home/flop/Dokumente/");
+        // Windows
+        store.setLocation("C:/Users/Filip/Downloads/");
         store.save(m);
     }
 
     public void load() throws PersistenceException, IOException, ClassNotFoundException {
         PersistenceStrategyStream<Member> load = new PersistenceStrategyStream<>();
-        load.setLocation("/home/flop/Dokumente/");
+
+        // Linux
+        //load.setLocation("/home/flop/Dokumente/");
+        // Windows
+        load.setLocation("C:/Users/Filip/Downloads/");
         m = load.load();
     }
 
-
+    // personal tests
     public static void main(String[] args) throws PersistenceException, IOException, ClassNotFoundException {
-        /*Container eins = getContainer();
-        eins.addMember(new ConcreteMember(1));
-        eins.addMember(new ConcreteMember(7));
 
+        Container c = new Container();
 
-        eins.dump();
-        eins.store();
-*/
-        Container zwei = getContainer();
+        speicherTest(c, 100);
+        //ladeTest(c);
 
-        zwei.load();
-        zwei.dump();
+        c.dump();
+
 
     }
+
+    // erstellt Members und speichert diese
+    static void speicherTest(Container c, int anzahl) throws PersistenceException, IOException {
+
+        for (int i = 0; i < anzahl; i++) {
+            c.addMember(new ConcreteMember(i));
+        }
+
+        c.store();
+    }
+
+    static void ladeTest(Container c) throws PersistenceException, IOException, ClassNotFoundException {
+        c.load();
+    }
+
 }

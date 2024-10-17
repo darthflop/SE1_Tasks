@@ -46,10 +46,8 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
 
         try{
             Object obj = ois.readObject();
-            System.out.println("Helli");
             if (obj instanceof List<?>) {
                   newList = (List) obj;
-                System.out.println("Moin");
             return newList;
             }
         }catch (IOException e){
