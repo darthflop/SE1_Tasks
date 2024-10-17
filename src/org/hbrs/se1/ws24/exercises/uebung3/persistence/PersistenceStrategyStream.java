@@ -3,7 +3,7 @@ package org.hbrs.se1.ws24.exercises.uebung3.persistence;
 import java.io.*;
 import java.util.List;
 
-public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Member> {
+public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
 
     // URL of file, in which the objects are stored
     private String location = "objects.ser";
@@ -19,7 +19,7 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
      * Method for saving a list of Member-objects to a disk (HDD)
      * Look-up in Google for further help!
      */
-    public void save(List<Member> member) throws PersistenceException {
+    public void save(List<E> member) throws PersistenceException {
 
         // Exception, falls dir nicht existiert
         File dir = new File(location);
@@ -49,16 +49,16 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
      * Some coding examples come for free :-)
      * Take also a look at the import statements above ;-!
      */
-    public List<Member> load() throws PersistenceException {
+    public List<E> load() throws PersistenceException {
 
-        List<Member> newList = null;
+        List<E> newList = null;
 
         try (FileInputStream fis = new FileInputStream(location + "ContainerList");
              ObjectInputStream ois = new ObjectInputStream(fis)) {
 
             Object obj = ois.readObject();
             if (obj instanceof List<?>) {
-                newList = (List<Member>) obj; // Typensicherheit herstellen
+                newList = (List<E>) obj; // Typensicherheit herstellen
                 fis.close();
                 ois.close();
                 return newList;

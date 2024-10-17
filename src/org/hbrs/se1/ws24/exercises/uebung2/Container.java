@@ -1,5 +1,7 @@
 package org.hbrs.se1.ws24.exercises.uebung2;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceException;
+import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategy;
+import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyMongoDB;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyStream;
 
 import java.io.IOException;
@@ -12,6 +14,7 @@ public class Container {
     private static Container container;
     private List<Member> m = new LinkedList<>();
     private int size;
+    private PersistenceStrategy<Member> persistenceStrategy;
 
     private Container() {
         this.size = 0;
@@ -46,60 +49,33 @@ public class Container {
         return -1;
     }
 
-    public void dump() {
-        for (Member x : m) {
-            System.out.println(x);
-        }
-    }
-
     public int size() {
         return this.size;
     }
 
     public void store() throws PersistenceException, IOException {
-        PersistenceStrategyStream<Member> store = new PersistenceStrategyStream<>();
-        // Linux
-        //store.setLocation("/home/flop/Dokumente/");
-        // Windows
-        store.setLocation("C:/Users/Filip/Downloads/");
-        store.save(m);
+        if (persistenceStrategy == null) {
+            throw new PersistenceException(PersistenceException.ExceptionType.NoStrategyIsSet,
+                    "Keine Persistenzstrategie gesetzt!");
+        }
+        persistenceStrategy.save(m);
     }
 
     public void load() throws PersistenceException, IOException, ClassNotFoundException {
-        PersistenceStrategyStream<Member> load = new PersistenceStrategyStream<>();
-
-        // Linux
-        //load.setLocation("/home/flop/Dokumente/");
-        // Windows
-        load.setLocation("C:/Users/Filip/Downloads/");
-        m = load.load();
-    }
-
-    // personal tests
-    public static void main(String[] args) throws PersistenceException, IOException {
-
-        Container c = new Container();
-
-        speicherTest(c, 100);
-        //ladeTest(c);
-
-        c.dump();
-
-
-    }
-
-    // erstellt Members und speichert diese
-    static void speicherTest(Container c, int anzahl) throws PersistenceException, IOException {
-
-        for (int i = 0; i < anzahl; i++) {
-            c.addMember(new ConcreteMember(i*2));
+        if (persistenceStrategy == null) {
+            throw new PersistenceException(PersistenceException.ExceptionType.NoStrategyIsSet,
+                    "Keine Persistenzstrategie gesetzt!");
         }
-
-        c.store();
+        m = persistenceStrategy.load();
+        this.size = m.size();
     }
 
-    static void ladeTest(Container c) throws PersistenceException, IOException, ClassNotFoundException {
-        c.load();
+    public void setPersistenceStrategy(PersistenceStrategy<Member> persistenceStrategy){
+        this.persistenceStrategy = persistenceStrategy;
+    }
+
+    public List<Member> getCurrentList(){
+        return this.m;
     }
 
 }
