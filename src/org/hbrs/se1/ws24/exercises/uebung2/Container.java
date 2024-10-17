@@ -76,7 +76,7 @@ public class Container {
     }
 
     // personal tests
-    public static void main(String[] args) throws PersistenceException, IOException, ClassNotFoundException {
+    public static void main(String[] args) throws PersistenceException, IOException {
 
         Container c = new Container();
 
@@ -92,7 +92,7 @@ public class Container {
     static void speicherTest(Container c, int anzahl) throws PersistenceException, IOException {
 
         for (int i = 0; i < anzahl; i++) {
-            c.addMember(new ConcreteMember(i));
+            c.addMember(new ConcreteMember(i*2));
         }
 
         c.store();

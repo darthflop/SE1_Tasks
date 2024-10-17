@@ -19,18 +19,29 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
      * Method for saving a list of Member-objects to a disk (HDD)
      * Look-up in Google for further help!
      */
-    public void save(List<Member> member) throws PersistenceException, IOException {
+    public void save(List<Member> member) throws PersistenceException {
 
-        FileOutputStream fos = new FileOutputStream(location + "ContainerList");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        try{
-            oos.writeObject(member);
-        } catch (IOException e){
-            System.out.println(e.getMessage());
+        // Exception, falls dir nicht existiert
+        File dir = new File(location);
+        if (!dir.exists() || !dir.isDirectory()) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ConnectionNotAvailable,
+                    "Das Verzeichnis existiert nicht oder ist kein Verzeichnis: " + location);
         }
-        fos.close();
-        oos.close();
+
+        // Versuche, die Datei zu schreiben
+        try (FileOutputStream fos = new FileOutputStream(location + "ContainerList");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+            // member Liste speichern
+            oos.writeObject(member);
+
+        } catch (IOException e) {
+            // Fehler beim Speichern protokollieren und neue Ausnahme werfen
+            throw new PersistenceException(PersistenceException.ExceptionType.ConnectionNotAvailable,
+                    "Fehler beim Speichern der Datei: " + e.getMessage());
+        }
     }
+
 
     @Override
     /**
@@ -38,24 +49,33 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
      * Some coding examples come for free :-)
      * Take also a look at the import statements above ;-!
      */
-    public List<Member> load() throws PersistenceException, IOException, ClassNotFoundException {
+    public List<Member> load() throws PersistenceException {
 
-        FileInputStream fis = new FileInputStream(location + "ContainerList");
-        ObjectInputStream ois = new ObjectInputStream(fis);
         List<Member> newList = null;
 
-        try{
+        try (FileInputStream fis = new FileInputStream(location + "ContainerList");
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+
             Object obj = ois.readObject();
             if (obj instanceof List<?>) {
-                  newList = (List) obj;
-            return newList;
+                newList = (List<Member>) obj; // Typensicherheit herstellen
+                fis.close();
+                ois.close();
+                return newList;
+            } else {
+                throw new PersistenceException(PersistenceException.ExceptionType.NoStrategyIsSet,
+                        "Das gelesene Objekt ist keine Liste.");
             }
-        }catch (IOException e){
-            System.out.println(e.getMessage());
+
+        } catch (IOException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ConnectionNotAvailable,
+                    "Fehler beim Lesen der Datei: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
+                    "Die Klasse konnte nicht gefunden werden: " + e.getMessage());
         }
 
-        fis.close();
-        ois.close();
+
 
         // Some Coding hints ;-)
 
@@ -74,6 +94,6 @@ public class PersistenceStrategyStream<Member> implements PersistenceStrategy<Me
         // return newListe
 
         // and finally close the streams
-        return null;
+
     }
 }
