@@ -57,7 +57,8 @@ public class TestContainer {
 
         // Stream-Strategie setzen
         PersistenceStrategyStream<Member> streamStrategy = new PersistenceStrategyStream<>();
-        streamStrategy.setLocation("C:/Users/Filip/Downloads/");
+        //streamStrategy.setLocation("C:/Users/Filip/Downloads/");
+        streamStrategy.setLocation("/home/flop/Downloads/");
         c.setPersistenceStrategy(streamStrategy);
 
         // Initial Zustand testen
