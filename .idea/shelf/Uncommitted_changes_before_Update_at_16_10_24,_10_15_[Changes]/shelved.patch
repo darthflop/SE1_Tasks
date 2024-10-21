@@ -1,0 +1,104 @@
+Index: src/org/hbrs/se1/ws24/exercises/uebung2/Container.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.hbrs.se1.ws24.exercises.uebung2;\nimport java.util.ArrayList;\nimport java.util.Objects;\n\npublic class Container {\n\n    private ArrayList<Member> m = new ArrayList<>();\n    private int size;\n\n    public Container(){\n        this.size = 0;\n    }\n\n    public void addMember(Member member) throws ContainerException{\n\n        for(Member x:this.m){\n            if(Objects.equals(x.getID(), member.getID())){\n                throw new ContainerException(\"Das Member-Objekt mit der ID \" + member.getID() + \" ist bereits vorhanden!\");\n            }\n        }\n        m.add(member);\n        this.size++;\n    }\n\n    public int deleteMember(int id){\n        for(Member x:this.m){\n            if(x.getID() == id){\n                this.m.remove(x);\n                this.size--;\n                return 0;\n            }\n        }\n        return -1;\n    }\n\n    public void dump(){\n        for(Member x:m){\n            System.out.println(x);\n        }\n    }\n\n    public int size(){\n        return this.size;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java b/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java
+--- a/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java	(revision d5d9bf8bba487a7d3233a6f0e5a91d68e95ebb56)
++++ b/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java	(date 1729065629276)
+@@ -1,10 +1,12 @@
+ package org.hbrs.se1.ws24.exercises.uebung2;
+ import java.util.ArrayList;
+-import java.util.Objects;
++import java.util.LinkedList;
++import java.util.List;
+ 
+ public class Container {
+ 
+-    private ArrayList<Member> m = new ArrayList<>();
++    // private List<Member> m = new LinkedList<>();
++    private List<Member> m = new ArrayList<>();
+     private int size;
+ 
+     public Container(){
+@@ -14,7 +16,7 @@
+     public void addMember(Member member) throws ContainerException{
+ 
+         for(Member x:this.m){
+-            if(Objects.equals(x.getID(), member.getID())){
++            if(x.getID() == member.getID()){
+                 throw new ContainerException("Das Member-Objekt mit der ID " + member.getID() + " ist bereits vorhanden!");
+             }
+         }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"11b931b2-f8a2-4546-af99-1df1f0f211cc\" name=\"Changes\" comment=\"mehr Testfälle\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Exception\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;darthflop&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/aldaGit/codesSEws24.git&quot;,\n    &quot;accountId&quot;: &quot;8f71f362-936f-4618-b7a3-dc2a955c9630&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 1\n}</component>\n  <component name=\"ProjectId\" id=\"2mW0K1ridSNtBXJ1HQIirtbe7AX\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Application.Client.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Container.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Factory.executor&quot;: &quot;Run&quot;,\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\n    &quot;JUnit.ContainerTest.executor&quot;: &quot;Run&quot;,\n    &quot;JUnit.GermanTranslatorTest.executor&quot;: &quot;Run&quot;,\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/saschaalda/IdeaProjects/codesSE2024/src/org/hbrs/se1/ws24/exercises&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises\" />\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"11b931b2-f8a2-4546-af99-1df1f0f211cc\" name=\"Changes\" comment=\"\" />\n      <created>1727176957166</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1727176957166</updated>\n      <workItem from=\"1727176958305\" duration=\"1892000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Factory Klasse und Übersetzer Methode\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727956755144</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727956755144</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Aufgaben in README beantwortet\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727958793178</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727958793178</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Anpassung README\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727961466714</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727961466714</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Implementierung &quot;void display&quot; in Client\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727967488766</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727967488766</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Anpassung ReadMe\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728294890057</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728294890057</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Aufgabe 2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728468106776</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728468106776</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Testfälle\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728894307934</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728894307934</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"mehr Testfälle\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728898007015</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728898007016</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"9\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Factory Klasse und Übersetzer Methode\" />\n    <MESSAGE value=\"Aufgaben in README beantwortet\" />\n    <MESSAGE value=\"Anpassung README\" />\n    <MESSAGE value=\"Implementierung &quot;void display&quot; in Client\" />\n    <MESSAGE value=\"Anpassung ReadMe\" />\n    <MESSAGE value=\"Aufgabe 2\" />\n    <MESSAGE value=\"Testfälle\" />\n    <MESSAGE value=\"mehr Testfälle\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"mehr Testfälle\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d5d9bf8bba487a7d3233a6f0e5a91d68e95ebb56)
++++ b/.idea/workspace.xml	(date 1729064131805)
+@@ -4,8 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="mehr Testfälle">
++    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="hinzufügen Testfaelle Tabelle">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -63,7 +64,7 @@
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/saschaalda/IdeaProjects/codesSE2024/src/org/hbrs/se1/ws24/exercises&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/flop/IdeaProjects/codesSEws24/src/org/hbrs/se1/ws24/exercises/uebung2/testfaelle&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -74,8 +75,12 @@
+ }</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/testfaelle" />
+       <recent name="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises" />
+       <recent name="$PROJECT_DIR$/src" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2" />
+     </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -152,7 +157,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1728898007016</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="hinzufügen Testfaelle Tabelle">
++      <option name="closed" value="true" />
++      <created>1728988704082</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1728988704082</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -178,6 +191,7 @@
+     <MESSAGE value="Aufgabe 2" />
+     <MESSAGE value="Testfälle" />
+     <MESSAGE value="mehr Testfälle" />
+-    <option name="LAST_COMMIT_MESSAGE" value="mehr Testfälle" />
++    <MESSAGE value="hinzufügen Testfaelle Tabelle" />
++    <option name="LAST_COMMIT_MESSAGE" value="hinzufügen Testfaelle Tabelle" />
+   </component>
+ </project>
+\ No newline at end of file
