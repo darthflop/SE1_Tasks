@@ -1,8 +1,6 @@
 package org.hbrs.se1.ws24.exercises.uebung2;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceException;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategy;
-import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyMongoDB;
-import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyStream;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -22,7 +20,11 @@ public class Container {
 
     public static Container getContainer() {
         if (container == null) {
-            container = new Container();
+            synchronized (Container.class){
+                if (container == null){
+                    container = new Container();
+                }
+            }
         }
         return container;
     }
