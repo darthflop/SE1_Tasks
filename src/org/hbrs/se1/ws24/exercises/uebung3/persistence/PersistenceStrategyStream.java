@@ -19,7 +19,7 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
      * Method for saving a list of Member-objects to a disk (HDD)
      * Look-up in Google for further help!
      */
-    public void save(List<E> member) throws PersistenceException {
+    public void save(List<E> list) throws PersistenceException {
 
         // Exception, falls dir nicht existiert
         File dir = new File(location);
@@ -33,7 +33,7 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
             // member Liste speichern
-            oos.writeObject(member);
+            oos.writeObject(list);
 
         } catch (IOException e) {
             // Fehler beim Speichern protokollieren und neue Ausnahme werfen
@@ -55,7 +55,6 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
 
         try (FileInputStream fis = new FileInputStream(location + "ContainerList");
              ObjectInputStream ois = new ObjectInputStream(fis)) {
-
             Object obj = ois.readObject();
             if (obj instanceof List<?>) {
                 newList = (List<E>) obj; // Typensicherheit herstellen

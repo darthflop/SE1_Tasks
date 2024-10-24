@@ -12,6 +12,6 @@ import java.util.List;
  *
  */
 public interface PersistenceStrategy<E> {
-    public void save(List<E> member) throws PersistenceException, IOException;
+    public void save(List<E> list) throws PersistenceException, IOException;
     public List<E> load() throws PersistenceException, IOException, ClassNotFoundException;
 }

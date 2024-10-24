@@ -8,6 +8,6 @@ public class US_help implements US_Command{
         System.out.println("store - Abspeichern");
         System.out.println("load - Laden");
         System.out.println("dump - nach Priorisierung soriterte Ausgabe aller User Stories");
-        System.out.println("exit - Programm beenden");
+        System.out.println("exit - Programm beenden\n");
     }
 }
