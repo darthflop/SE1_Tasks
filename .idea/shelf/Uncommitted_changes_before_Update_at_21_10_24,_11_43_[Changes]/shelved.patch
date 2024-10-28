@@ -1,0 +1,104 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"11b931b2-f8a2-4546-af99-1df1f0f211cc\" name=\"Changes\" comment=\"anfangen aufgabe 3\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Exception\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;darthflop&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/aldaGit/codesSEws24.git&quot;,\n    &quot;accountId&quot;: &quot;8f71f362-936f-4618-b7a3-dc2a955c9630&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 1\n}</component>\n  <component name=\"ProjectId\" id=\"2mW0K1ridSNtBXJ1HQIirtbe7AX\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.Client.executor\": \"Run\",\n    \"Application.Container.executor\": \"Run\",\n    \"Application.Factory.executor\": \"Run\",\n    \"Downloaded.Files.Path.Enabled\": \"false\",\n    \"JUnit.ContainerTest.executor\": \"Run\",\n    \"JUnit.GermanTranslatorTest.executor\": \"Run\",\n    \"Repository.Attach.Annotations\": \"false\",\n    \"Repository.Attach.JavaDocs\": \"false\",\n    \"Repository.Attach.Sources\": \"false\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/home/flop/IdeaProjects/codesSEws24/src/org/hbrs/se1/ws24/exercises/uebung3/persistence\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"settings.editor.selected.configurable\": \"Errors\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence\" />\n      <recent name=\"$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/testfaelle\" />\n      <recent name=\"$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises\" />\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"org.hbrs.se1.ws24.exercises.uebung3.persistence\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"11b931b2-f8a2-4546-af99-1df1f0f211cc\" name=\"Changes\" comment=\"\" />\n      <created>1727176957166</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1727176957166</updated>\n      <workItem from=\"1727176958305\" duration=\"1892000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Factory Klasse und Übersetzer Methode\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727956755144</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727956755144</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Aufgaben in README beantwortet\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727958793178</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727958793178</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Anpassung README\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727961466714</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727961466714</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Implementierung &quot;void display&quot; in Client\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1727967488766</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1727967488766</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Anpassung ReadMe\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728294890057</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728294890057</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Aufgabe 2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728468106776</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728468106776</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Testfälle\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728894307934</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728894307934</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"mehr Testfälle\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728898007015</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728898007016</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"hinzufügen Testfaelle Tabelle\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728988704082</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728988704082</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"anfangen aufgabe 3\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1729077820175</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1729077820175</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"11\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Factory Klasse und Übersetzer Methode\" />\n    <MESSAGE value=\"Aufgaben in README beantwortet\" />\n    <MESSAGE value=\"Anpassung README\" />\n    <MESSAGE value=\"Implementierung &quot;void display&quot; in Client\" />\n    <MESSAGE value=\"Anpassung ReadMe\" />\n    <MESSAGE value=\"Aufgabe 2\" />\n    <MESSAGE value=\"Testfälle\" />\n    <MESSAGE value=\"mehr Testfälle\" />\n    <MESSAGE value=\"hinzufügen Testfaelle Tabelle\" />\n    <MESSAGE value=\"anfangen aufgabe 3\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"anfangen aufgabe 3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 83ecf5ab31c8e60ed710ee1e61b3d9e493e3d630)
++++ b/.idea/workspace.xml	(date 1729503780077)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="anfangen aufgabe 3" />
++    <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="." />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -44,32 +44,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.Client.executor": "Run",
+-    "Application.Container.executor": "Run",
+-    "Application.Factory.executor": "Run",
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "JUnit.ContainerTest.executor": "Run",
+-    "JUnit.GermanTranslatorTest.executor": "Run",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "/home/flop/IdeaProjects/codesSEws24/src/org/hbrs/se1/ws24/exercises/uebung3/persistence",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "settings.editor.selected.configurable": "Errors",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Container.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Factory.executor&quot;: &quot;Run&quot;,
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;JUnit.ContainerTest.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.GermanTranslatorTest.executor&quot;: &quot;Run&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/flop/IdeaProjects/codesSEws24/src/org/hbrs/se1/ws24/exercises/uebung3/persistence&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence" />
+@@ -174,7 +174,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1729077820175</updated>
+     </task>
+-    <option name="localTasksCounter" value="11" />
++    <task id="LOCAL-00011" summary=".">
++      <option name="closed" value="true" />
++      <created>1729503696632</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1729503696632</updated>
++    </task>
++    <option name="localTasksCounter" value="12" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -202,6 +210,7 @@
+     <MESSAGE value="mehr Testfälle" />
+     <MESSAGE value="hinzufügen Testfaelle Tabelle" />
+     <MESSAGE value="anfangen aufgabe 3" />
+-    <option name="LAST_COMMIT_MESSAGE" value="anfangen aufgabe 3" />
++    <MESSAGE value="." />
++    <option name="LAST_COMMIT_MESSAGE" value="." />
+   </component>
+ </project>
+\ No newline at end of file
