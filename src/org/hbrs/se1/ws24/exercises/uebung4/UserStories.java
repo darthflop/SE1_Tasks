@@ -76,4 +76,8 @@ public class UserStories implements Serializable {
         return (double) (mehrwert + strafe) / (aufwand + risiko);
     }
 
+    public void setID(int id){
+        this.id=id;
+    }
+
 }

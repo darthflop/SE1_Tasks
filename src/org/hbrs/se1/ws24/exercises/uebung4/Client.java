@@ -20,36 +20,32 @@ public class Client {
         c.setPersistenceStrategy(strategy);
 
         CommandExecuter executer = new CommandExecuter(); // Invoker
-        US_Command help = new US_help();
-        US_Command exit = new US_exit();
-        US_Command enter = new US_enter(sc, c);
-        US_Command dump = new US_dump(c);
-        US_Command store = new US_store(strategy, c, sc);
-        US_Command load = new US_load(strategy, c, sc);
-
 
         while(true){
             System.out.print(">");
-            String command = sc.next();
+            String command = sc.nextLine();
 
             switch (command){
                 case "help":
-                    executer.setCommand(help);
+                    executer.setCommand(new US_help());
                     break;
                 case "exit":
-                    executer.setCommand(exit);
+                    executer.setCommand(new US_exit());
                     break;
                 case "enter":
-                    executer.setCommand(enter);
+                    executer.setCommand(new US_enter(sc, c));
                     break;
                 case "dump":
-                    executer.setCommand(dump);
+                    executer.setCommand(new US_dump(c, false));
+                    break;
+                case "dump -s":
+                    executer.setCommand(new US_dump(c, true));
                     break;
                 case "store":
-                    executer.setCommand(store);
+                    executer.setCommand(new US_store(strategy, c, sc));
                     break;
                 case "load":
-                    executer.setCommand(load);
+                    executer.setCommand(new US_load(strategy, c, sc));
                     break;
                 default:
                     executer.setCommand(null);

@@ -31,6 +31,7 @@ public class Container {
     }
 
     public void addUserStory(UserStories story) throws ContainerException {
+        story.setID(this.list.size());
         list.add(story);
         this.size++;
     }
