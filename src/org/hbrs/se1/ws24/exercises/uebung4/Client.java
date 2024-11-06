@@ -27,14 +27,18 @@ public class Client {
             String[] command = input.split(" ");
 
             switch (command[0]){
-                case "help":
-                    executer.setCommand(new US_help());
-                    break;
                 case "exit":
                     executer.setCommand(new US_exit());
                     break;
                 case "enter":
                     executer.setCommand(new US_enter(sc, c));
+                    break;
+                case "help":
+                    if(command.length == 1){
+                        executer.setCommand(new US_help());
+                    } else {
+                        executer.setCommand(new US_help(command[1]));
+                    }
                     break;
                 case "dump":
                     if(command.length == 1){
@@ -58,7 +62,7 @@ public class Client {
                 case "load":
                     if(command.length == 1){
                         System.out.println("Kein Pfad angegeben.");
-                        System.out.println("Zeige gültige Befehle mit 'help' an.");
+                        System.out.println("Zeige weitere Hilfe mit 'help load' an.");
                         break;
                     } else {
                         executer.setCommand(new US_load(strategy, c, sc, command[1]));
