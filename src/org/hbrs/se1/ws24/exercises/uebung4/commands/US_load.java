@@ -28,6 +28,7 @@ public class US_load implements US_Command{
         strategy.setLocation(sc.next());
 
         c.load();
+        UserStories.setIdCount(c.getMaxID());
 
         System.out.println("User Stories wurden geladen!");
     }

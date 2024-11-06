@@ -76,6 +76,16 @@ public class Container {
         return this.list;
     }
 
+    public int getMaxID(){
+        int max = 0;
+
+        for(UserStories x : this.list){
+            if(x.getID() > max){
+                max = x.getID();
+            }
+        }
+        return max;
+    }
 
 
 }

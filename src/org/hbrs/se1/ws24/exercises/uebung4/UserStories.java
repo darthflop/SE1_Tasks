@@ -80,4 +80,8 @@ public class UserStories implements Serializable {
         this.id=id;
     }
 
+    public static void setIdCount(int id){
+        idCount = id;
+    }
+
 }

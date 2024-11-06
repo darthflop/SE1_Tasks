@@ -22,10 +22,11 @@ public class Client {
         CommandExecuter executer = new CommandExecuter(); // Invoker
 
         while(true){
-            System.out.print(">");
-            String command = sc.nextLine();
+            System.out.print("> ");
+            String input = sc.nextLine();
+            String[] command = input.split(" ");
 
-            switch (command){
+            switch (command[0]){
                 case "help":
                     executer.setCommand(new US_help());
                     break;
@@ -36,10 +37,15 @@ public class Client {
                     executer.setCommand(new US_enter(sc, c));
                     break;
                 case "dump":
-                    executer.setCommand(new US_dump(c, false));
-                    break;
-                case "dump -s":
-                    executer.setCommand(new US_dump(c, true));
+                    if(command.length == 1){
+                        executer.setCommand(new US_dump(c, 0));
+                    } else if(command[1].equals("-s") && command.length == 2){
+                        executer.setCommand(new US_dump(c, 1));
+                    } else if(command[1].equals("projekt") && command.length == 3){
+                        executer.setCommand(new US_dump(c, 2, command[2]));
+                    } else if(command[1].equals("-s") && command[2].equals("projekt")){
+                        executer.setCommand(new US_dump(c, 3, command[3]));
+                    }
                     break;
                 case "store":
                     executer.setCommand(new US_store(strategy, c, sc));
