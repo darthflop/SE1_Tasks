@@ -13,20 +13,20 @@ public class US_load implements US_Command{
     private PersistenceStrategyStream<UserStories> strategy;
     private Container c;
     private Scanner sc;
+    private String pfad;
 
-    public US_load(PersistenceStrategyStream<UserStories> strategy, Container c, Scanner sc){
+    public US_load(PersistenceStrategyStream<UserStories> strategy, Container c, Scanner sc, String pfad){
         this.strategy = strategy;
         this.c = c;
         this.sc = sc;
+        this.pfad = pfad;
     }
 
     @Override
     public void execute() throws PersistenceException, IOException, ClassNotFoundException {
 
-        System.out.print("Geben Sie den Pfad der Datei ein: ");
         c.setPersistenceStrategy(strategy);
-        strategy.setLocation(sc.next());
-
+        strategy.setLocation(pfad);
         c.load();
         UserStories.setIdCount(c.getMaxID());
 

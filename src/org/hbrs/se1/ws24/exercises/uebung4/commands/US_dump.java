@@ -12,35 +12,36 @@ import java.util.stream.Collectors;
 public class US_dump implements US_Command {
 
     Container c;
-    int argument;
+    int arg;
     String filter;
 
-    public US_dump(Container c, int argument){
+    public US_dump(Container c, int arg){
         this.c = c;
-        this.argument = argument;
+        this.arg = arg;
     }
 
-    public US_dump(Container c, int argument, String filter){
+    public US_dump(Container c, int arg, String filter){
         this.c = c;
-        this.argument = argument;
+        this.arg = arg;
         this.filter = filter;
     }
 
     @Override
     public void execute() {
 
-        if(argument == 0){
+        if(arg == 0){
             dumpNormal();
-        }else if(argument == 1){
+        }else if(arg == 1){
             dumpSorted();
-        }else if(argument == 2){
+        }else if(arg == 2){
             dumpFiltered();
-        }else if(argument == 3){
+        }else if(arg == 3){
             dumpFilteredSorted();
         }
     }
 
     private void dumpFilteredSorted(){
+
         List<UserStories> out = new ArrayList<>(List.copyOf(c.getCurrentList()));
         List<UserStories> filtered = out.stream()
                 .filter(element -> element.getProjekt().equals(filter))

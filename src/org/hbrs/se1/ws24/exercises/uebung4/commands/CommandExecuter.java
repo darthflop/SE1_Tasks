@@ -9,7 +9,7 @@ import java.util.List;
 public class CommandExecuter {
 
     private final List<US_Command> commands = new ArrayList<>();
-    US_Command command;
+    public US_Command command;
 
 
     public void setCommand(US_Command command){
@@ -19,11 +19,6 @@ public class CommandExecuter {
     public void execute() throws PersistenceException, IOException, ClassNotFoundException {
         if (command != null) {
             command.execute();
-        } else {
-            System.out.println("Kein gültiger Befehl!");
-            System.out.println("Zeige gültige Befehle mit 'help' an.");
         }
     }
-
-
 }

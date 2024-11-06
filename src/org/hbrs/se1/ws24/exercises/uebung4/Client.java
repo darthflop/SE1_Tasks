@@ -48,15 +48,29 @@ public class Client {
                     }
                     break;
                 case "store":
-                    executer.setCommand(new US_store(strategy, c, sc));
+                    if(command.length == 1){
+                        System.out.println("Kein Pfad angegeben.");
+                        System.out.println("Zeige gültige Befehle mit 'help' an.");
+                    } else {
+                        executer.setCommand(new US_store(strategy, c, sc, command[1]));
+                    }
                     break;
                 case "load":
-                    executer.setCommand(new US_load(strategy, c, sc));
+                    if(command.length == 1){
+                        System.out.println("Kein Pfad angegeben.");
+                        System.out.println("Zeige gültige Befehle mit 'help' an.");
+                        break;
+                    } else {
+                        executer.setCommand(new US_load(strategy, c, sc, command[1]));
+                    }
                     break;
                 default:
-                    executer.setCommand(null);
+                    System.out.println("Kein gültiger Befehl!");
+                    System.out.println("Zeige gültige Befehle mit 'help' an.");
             }
-            executer.execute();
+            if(executer.command != null) {
+                executer.execute();
+            }
         }
     }
 }

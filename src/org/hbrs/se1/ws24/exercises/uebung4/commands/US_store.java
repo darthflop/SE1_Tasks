@@ -13,21 +13,20 @@ public class US_store implements US_Command{
     private PersistenceStrategyStream<UserStories> strategy;
     private Container c;
     private Scanner sc;
+    private String pfad;
 
-    public US_store(PersistenceStrategyStream<UserStories> strategy, Container c, Scanner sc){
+    public US_store(PersistenceStrategyStream<UserStories> strategy, Container c, Scanner sc, String pfad){
         this.strategy = strategy;
         this.c = c;
         this.sc = sc;
+        this.pfad = pfad;
     }
 
     @Override
     public void execute() throws PersistenceException, IOException {
 
-        System.out.print("Geben Sie einen Speicher Pfad ein: ");
-        strategy.setLocation(sc.next());
-
+        strategy.setLocation(pfad);
         c.store();
-
         System.out.println("User Stories erfolgreich gespeichert!");
     }
 
