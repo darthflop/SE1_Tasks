@@ -26,8 +26,14 @@ public class US_store implements US_Command{
     public void execute() throws PersistenceException, IOException {
 
         strategy.setLocation(pfad);
-        c.store();
-        System.out.println("User Stories erfolgreich gespeichert!");
+
+        try{
+            c.store();
+            System.out.println("User Stories erfolgreich gespeichert!");
+        } catch(PersistenceException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 
 }

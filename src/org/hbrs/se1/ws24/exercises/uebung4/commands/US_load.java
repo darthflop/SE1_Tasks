@@ -27,10 +27,14 @@ public class US_load implements US_Command{
 
         c.setPersistenceStrategy(strategy);
         strategy.setLocation(pfad);
-        c.load();
-        UserStories.setIdCount(c.getMaxID());
+        try{
+            c.load();
+            UserStories.setIdCount(c.getMaxID());
+            System.out.println("User Stories wurden geladen!");
+        } catch(PersistenceException e){
+            System.out.println(e.getMessage());
+        }
 
-        System.out.println("User Stories wurden geladen!");
     }
 
 }
