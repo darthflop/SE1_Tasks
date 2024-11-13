@@ -27,14 +27,39 @@ public class US_enter implements US_Command {
         String akzeptanzKriterien = sc.nextLine();
 
         System.out.println("\nNun folgt die Eingabe der Priorisierungen (von 1-5):");
+
         System.out.print("Relativer Mehrwert: ");
         int mehrwert = sc.nextInt();
+        while(mehrwert < 1 || mehrwert > 5){
+            System.out.println("Bitte geben Sie einen Wert zwischen 1 und 5 ein.");
+            System.out.print("Relativer Mehrwert: ");
+            mehrwert = sc.nextInt();
+        }
+
         System.out.print("Relative Strafe: ");
         int strafe = sc.nextInt();
+        while(strafe < 1 || strafe > 5){
+            System.out.println("Bitte geben Sie einen Wert zwischen 1 und 5 ein.");
+            System.out.print("Relative Strafe: ");
+            strafe = sc.nextInt();
+        }
+
         System.out.print("Relatives Risiko: ");
         int risiko = sc.nextInt();
+        while(risiko < 1 || risiko > 5){
+            System.out.println("Bitte geben Sie einen Wert zwischen 1 und 5 ein.");
+            System.out.print("Relatives Risiko: ");
+            risiko = sc.nextInt();
+        }
+
         System.out.print("Relativer Aufwand: ");
         int aufwand = sc.nextInt();
+        while(aufwand < 1 || aufwand > 5){
+            System.out.println("Bitte geben Sie einen Wert zwischen 1 und 5 ein.");
+            System.out.print("Relativer Aufwand: ");
+            aufwand = sc.nextInt();
+        }
+
         sc.nextLine();
 
         double prio = UserStories.calcPrio(mehrwert, strafe, risiko, aufwand);
